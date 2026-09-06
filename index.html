@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Validation: Guess the Number</title>
+    <style>
+        body {
+            font-family: italic, pixels, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background: #08a7eb;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            color: rgb(93, 4, 236);
+            background-color: rgb(234, 129, 2);
+            border-radius: 240px;
+        }
+        </style>
+</head>
+<body>
+    <h1>Guess the Number</h1>
+    <p>This is a simple number guessing game.</p>
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <p id="msg-name"></p>
+     <input type="number" id="guess" placeholder="Enter your guess from 1 to 5" required>
+    <p id="msg-guess"></p>
+    <button onclick="checkGuess()">Check Guess</button>
+    <p id="result"></p>
+    <p id="timer"></p>
+</body>
+</html>
