@@ -45,7 +45,7 @@
             var name = document.getElementById("name").value;
             var guess = document.getElementById("guess").value;
             var ok = true;
-             }
+            
               if (name == "") {
                 document.getElementById("msg-name").innerHTML = "Please enter your name.";
                 ok = false;
@@ -69,6 +69,7 @@
                         document.getElementById("result").innerHTML = "Sorry " + name + ", the lucky number was " + luckyNumber + ". Better luck next time!";
                     }
                 }
+            }
     </script>
 </body>
 </html>
