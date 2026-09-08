@@ -33,5 +33,42 @@
     <button onclick="checkGuess()">Check Guess</button>
     <p id="result"></p>
     <p id="timer"></p>
+
+    <script>
+        var seconds = 0;
+        setInterval(function() {
+            seconds = seconds + 1;
+            document.getElementById("timer").innerHTML = "You have been playing for " + seconds + " seconds";
+        }, 1000);
+        
+            function checkGuess() { 
+            var name = document.getElementById("name").value;
+            var guess = document.getElementById("guess").value;
+            var ok = true;
+             }
+              if (name == "") {
+                document.getElementById("msg-name").innerHTML = "Please enter your name.";
+                ok = false;
+                } else {
+                document.getElementById("msg-name").innerHTML = "";
+                }   
+            if (guess == "") {
+                document.getElementById("msg-guess").innerHTML = "Please enter your guess.";
+                ok = false;
+                } else if (guess < 1 || guess > 5) {
+                document.getElementById("msg-guess").innerHTML = "Please enter a number between 1 and 5.";
+                ok = false;
+                } else {
+                document.getElementById("msg-guess").innerHTML = "";
+                }
+                if(ok==true){
+                    var luckyNumber = Math.floor(Math.random() * 5) + 1;
+                    if (guess == luckyNumber) {
+                        document.getElementById("result").innerHTML = "Congratulations " + name + "! You guessed the lucky number " + luckyNumber + "!";
+                    } else {
+                        document.getElementById("result").innerHTML = "Sorry " + name + ", the lucky number was " + luckyNumber + ". Better luck next time!";
+                    }
+                }
+    </script>
 </body>
 </html>
